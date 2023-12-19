@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from watchlist_app.api.views import movie_list, movie_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('movie/', include('watchlist_app.urls')),
+    path('movie/', include('watchlist_app.api.urls')),
 ]
